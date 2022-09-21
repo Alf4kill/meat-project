@@ -355,3 +355,10 @@
 .footer-link:active {
   color: #ccc;
 }
+
+/* Services - page */
+
+.services-description {
+  font-size: 2.2rem;
+  line-height: 1.6;
+}
