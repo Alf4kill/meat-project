@@ -95,3 +95,27 @@ const slider = function () {
   });
 };
 slider();
+
+// stick
+
+const sectionHeroEl = document.querySelector(".section-hero");
+const sectionHeroE2 = document.querySelector(".section-title");
+
+const obs = new IntersectionObserver(
+  function (entries) {
+    const ent = entries[0];
+    if (ent.isIntersecting === false) {
+      document.body.classList.add("sticky");
+    }
+    if (ent.isIntersecting === true) {
+      document.body.classList.remove("sticky");
+    }
+  },
+  {
+    root: null,
+    threshold: 0,
+    rootMargin: "-80px",
+  }
+);
+
+obs.observe(sectionHeroEl, sectionHeroE2);
